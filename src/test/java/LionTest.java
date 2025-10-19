@@ -8,7 +8,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 import static org.junit.Assert.*;
 
-
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
     @Mock
@@ -19,29 +18,30 @@ public class LionTest {
 
     @Before
     public void setUp() throws Exception {
-        lion = new Lion("Самец", felineMock); // Явно создаем экземпляр с корректным полом
+
+        lion = new Lion("Самец");
     }
 
     @Test
     public void testConstructorMale() throws Exception {
-        Lion lion = new Lion("Самец", felineMock);
+        Lion lion = new Lion("Самец");
         assertTrue(lion.doesHaveMane());
     }
 
     @Test
     public void testConstructorFemale() throws Exception {
-        Lion lion = new Lion("Самка", felineMock);
+        Lion lion = new Lion("Самка");
         assertFalse(lion.doesHaveMane());
     }
 
     @Test(expected = Exception.class)
     public void testConstructorInvalidSex() throws Exception {
-        new Lion("Неизвестный пол", felineMock);
+        new Lion("Неизвестный пол");
     }
 
     @Test
     public void testGetKittens() {
-          assertEquals(1, lion.getKittens());
+        assertEquals(1, lion.getKittens());
     }
 
     @Test
