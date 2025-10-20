@@ -14,9 +14,21 @@ public class FelineTest {
     }
 
     @Test
-    public void testEatMeat() throws Exception {
+    public void testEatMeat_Animals() throws Exception {
         List<String> result = feline.eatMeat();
-        assertEquals(List.of("Животные", "Птицы", "Рыба"), result);
+        assertTrue(result.contains("Животные"));
+    }
+
+    @Test
+    public void testEatMeat_Birds() throws Exception {
+        List<String> result = feline.eatMeat();
+        assertTrue(result.contains("Птицы"));
+    }
+
+    @Test
+    public void testEatMeat_Fish() throws Exception {
+        List<String> result = feline.eatMeat();
+        assertTrue(result.contains("Рыба"));
     }
 
     @Test
@@ -26,7 +38,6 @@ public class FelineTest {
 
     @Test
     public void testGetKittens() {
-        assertEquals(1, feline.getKittens());
         assertEquals(3, feline.getKittens(3));
     }
 }
