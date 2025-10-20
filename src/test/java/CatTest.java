@@ -30,8 +30,8 @@ public class CatTest {
 
     @Test
     public void testGetFood() throws Exception {
-        when(felineMock.eatMeat()).thenReturn(List.of("Мясо", "Рыба"));
+        when(felineMock.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> result = cat.getFood();
-        assertEquals(List.of("Мясо", "Рыба"), result);
+        assertEquals(List.of("Животные", "Птицы", "Рыба"), result);
     }
 }
