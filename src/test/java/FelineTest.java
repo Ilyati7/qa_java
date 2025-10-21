@@ -14,19 +14,19 @@ public class FelineTest {
     }
 
     @Test
-    public void testEatMeat_Animals() throws Exception {
+    public void testEatMeatAnimals() throws Exception {
         List<String> result = feline.eatMeat();
         assertTrue(result.contains("Животные"));
     }
 
     @Test
-    public void testEatMeat_Birds() throws Exception {
+    public void testEatMeatBirds() throws Exception {
         List<String> result = feline.eatMeat();
         assertTrue(result.contains("Птицы"));
     }
 
     @Test
-    public void testEatMeat_Fish() throws Exception {
+    public void testEatMeatFish() throws Exception {
         List<String> result = feline.eatMeat();
         assertTrue(result.contains("Рыба"));
     }
